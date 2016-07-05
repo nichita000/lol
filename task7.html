@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    'use strict' ;
+
+    var a = +prompt('Первое число','000');
+    var b = +prompt('Второе число','000');
+    var result = 0;
+    function calculate(a,b) {
+      var intOne = +a[0];
+      var intTwo = +a[1];
+      var intThree = +a[2];
+
+      var intFour = +b[0];
+      var intFive = +b[1];
+      var intSix = +b[2];
+
+      var intFirst = intOne + intFour;
+      intFirst += '';
+      var intSecond = intTwo + intFive;
+      var intThird = intThree + intSix;
+
+      result = intFirst + intSecond +intThird;
+    }
+  </script>
+</body>
+</html>
