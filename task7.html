@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-  <script>
-    'use strict' ;
+    <script>
+        'use strict';
 
-    var a = +prompt('Первое число','000');
-    var b = +prompt('Второе число','000');
-    var result = 0;
-    function calculate(a,b) {
-      var intOne = +a[0];
-      var intTwo = +a[1];
-      var intThree = +a[2];
+        function calculate(numFirst, numSec) {
 
-      var intFour = +b[0];
-      var intFive = +b[1];
-      var intSix = +b[2];
+            numFirst += '';
+            numSec += '';
+            var result = '';
+            var ans1 = +numFirst[0] + +numSec[0];
+            var ans2 = +numFirst[1] + +numSec[1];
+            var ans3 = +numFirst[2] + +numSec[2];
+            if (ans3 > 10) {
+                ans3 -= 10;
+                ans2 += 1;
+            } else if (ans2 > 10) {
+                ans2 -= 10;
+                ans1 += 1;
+            }
 
-      var intFirst = intOne + intFour;
-      intFirst += '';
-      var intSecond = intTwo + intFive;
-      var intThird = intThree + intSix;
+            ans3 += '';
+            ans2 += '';
+            ans1 += '';
+            result = ans1 + ans2 + ans3 ;
+            console.log(result);
+        }
 
-      result = intFirst + intSecond +intThird;
-    }
-  </script>
+        calculate(999 ,100 );
+    </script>
 </body>
+
 </html>

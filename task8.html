@@ -10,16 +10,17 @@
 
 <body>
     <script>
-        'use strict';
-
-        function delStr(str, int) {
-            if (str.length != int) {
-                str = str.substring(0, int);
-            }
-            console.log(str)
+        function countWords(str) {
+            var amount = 0;
+            for (var i = 0; i < str.length; i++) {
+                if ( str[i] === ' ') {
+                  amount++;
+                }
         }
+        return amount + 1;
+      }
+      alert(countWords('you shell not pass'));
 
-          delStr('dalehoha', 4)
     </script>
 </body>
 

@@ -1,70 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-<script>
+    <script>
+        'use strict'
 
-  'use strict' ;
+h;
+        function checkCase(str) {
+            var lower = str.toLowerCase();
+            if (lower < str) {
+                str = str.toUpperCase();
+            } else {
+                str = str.toLowerCase();
+            }
+            alert(str);
+        }
 
-  var strOne = 'aDnjkSKcdjKD';
-  var strOneLow = strOne.toLowerCase();
-  var strTwo = 'aDKbF';
-  var strTwoLow = strTwo.toLowerCase();
-  var strThree = 'acDKbF';
-  var strThreeLow = strThree.toLowerCase();
-  var lowerOne = 0;
-  var lowerTwo = 0;
-  var lowerThree = 0;
-  var upperOne = 0;
-  var upperTwo = 0;
-  var upperThree = 0;
-  var letterStart;
-for(letterStart = 0 ; letterStart < strOne.length ; letterStart++) {
-  if( strOne[letterStart] == strOneLow[letterStart] ) {
-    lowerOne++;
-  }
-  else if( strOne[letterStart] != strOneLow[letterStart] ) {
-    upperOne++;
-  }
-  else if( strTwo[letterStart] == strTwoLow[letterStart] ) {
-    lowerTwo++;
-  }
-  else if(strTwo[letterStart] != strTwoLow[letterStart]) {
-    upperTwo++;
-  }
-  else if( strThree[letterStart] == strThreeLow[letterStart] ) {
-    lowerThree++;
-  }
-  else if( strThree[letterStart] != strThreeLow[letterStart] ){
-    upperThree++;
-  }
-}
-
-if( lowerOne > upperOne ) {
-  strOne = strOne.toLowerCase();
-}
-else if (upperOne > lowerOne){
-  strOne = strOne.toUpperCase();
-}
-else if(lowerTwo > upperTwo) {
-  strTwo = strTwo.toLowerCase();
-}
-else if(upperTwo > lowerTwo) {
-  strTwo = strTwo.toUpperCase();
-}
-else if(lowerThree > upperThree){
-  strThree = strThree.toLowerCase();
-}
-else if(upperThree > lowerThree) {
-  strThree = strThree.toUpperCase();
-}
-
-alert(strOne + '     ' + strTwo + '     ' + strThree + ' ' + lowerTwo);
-</script>
+        checkCase('aDnjkSKcdjKD');
+        checkCase('aDKbF');
+        checkCase('acDKbF');
+    </script>
 </body>
+
 </html>

@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-    'use strict';
 
-    var str = 'getElementBy';
-    var strTransformed = str.substring(0,3) + ' ' + str.substring(3,10) + ' ' + str.substring(10,12);
-    strTransformed = strTransformed.toLowerCase();
-    alert(strTransformed);
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function camelCase(str) {
+            var result = '';
+            var strUpp = str.toUpperCase();
+            for (var i = 0; i < str.length; i++) {
+                if (strUpp[i] === str[i] ) {
+                  result += ' ' + str.substring(0 , i  );
+                  str = str.substring(i, str.length);
+                  strUpp = strUpp.substring(i, strUpp.length);
+                  i = 1;
+                }
+            }
+            alert(str);
+            return result;
+
+        }
+        console.log( camelCase('getElementBy') );
+    </script>
 </body>
+
 </html>

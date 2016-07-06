@@ -10,16 +10,18 @@
 
 <body>
     <script>
-        'use strict';
+        'use strict'
 
-        function delStr(str, int) {
-            if (str.length != int) {
-                str = str.substring(0, int);
+        function sum(num) {
+            num += '';
+            var result = 0;
+            for (var i = 0; i < num.length; i++) {
+                result += +num[i];
             }
-            console.log(str)
+            return result;
         }
 
-          delStr('dalehoha', 4)
+        alert(sum(123))
     </script>
 </body>
 
