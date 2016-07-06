@@ -10,12 +10,18 @@
 
 <body>
     <script>
-        'use strict' ;
+        'use strict';
 
         function num(z) {
-          var res = 0;
-          return (Math.ceil(z) - z > 0) ? true : false ;
+            var res = 0;
+            if (Math.ceil(z) > z) {
+                alert(z + ' не целое');
+            } else {
+                alert(z + ' целое');
+            }
+            return res;
         }
+
         num(123);
         num(123.12);
     </script>

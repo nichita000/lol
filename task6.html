@@ -12,22 +12,20 @@
     <script>
         'use strict';
 
-        function camelCase(str) {
+        function findWord(z) {
             var result = '';
-            var strUpp = str.toUpperCase();
-            for (var i = 0; i < str.length; i++) {
-                if (strUpp[i] === str[i] ) {
-                  result += ' ' + str.substring(0 , i  );
-                  str = str.substring(i, str.length);
-                  strUpp = strUpp.substring(i, strUpp.length);
-                  i = 1;
+            var zUpp = z.toUpperCase();
+            for (var i = 0; i < z.length; i++) {
+                if ( zUpp[i] == z[i]) {
+                    result = result + ' ' + z[i];
+                } else {
+                    result = result + z[i];
                 }
             }
-            alert(str);
             return result;
-
         }
-        console.log( camelCase('getElementBy') );
+
+        alert(findWord('getElementBy'));
     </script>
 </body>
 

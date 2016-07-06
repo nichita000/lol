@@ -13,14 +13,13 @@
         function countWords(str) {
             var amount = 0;
             for (var i = 0; i < str.length; i++) {
-                if ( str[i] === ' ') {
-                  amount++;
+                if (str[i] === ' ') {
+                    amount++;
                 }
+            }
+            return amount + 1;
         }
-        return amount + 1;
-      }
-      alert(countWords('you shell not pass'));
-
+        alert(countWords('you shell not pass'));
     </script>
 </body>
 
