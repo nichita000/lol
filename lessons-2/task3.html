@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        'use strict'
+
+        var newA = ['ABc', 'ABcd', 'Abcd'];
+        function trans(str) {
+            var lowers = 0;
+            var uppers = 0;
+            for (var  i = 0; i < str.length ; i++){
+                if(str[i] === str[i].toLowerCase()) {
+                    lowers++;
+                } else {
+                    uppers++;
+                }
+            }
+            if(lowers > uppers) {
+                str = str.toLowerCase();
+            } else if (lowers === uppers){
+                str = str.toLowerCase();
+            } else {
+                str = str.toUpperCase();
+            }
+            return str;
+        }
+
+        function transformArr(arr) {
+            var exm = [];
+            arr.forEach(function(v,i) {
+            v = trans(v);
+            exm.push(v);
+            return v;
+            })
+            return exm;
+        }
+        console.log(transformArr(newA));
+    </script>
+</body>
+
+</html>
