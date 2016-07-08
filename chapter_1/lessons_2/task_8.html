@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        var obj = [{
+            name: 'moisei',
+            text: 'blabla'
+        }, {
+            name: 'luka',
+            text: 'alo'
+        }, {
+            name: 'arhip',
+            text: 'iuh'
+        }, ];
+
+        function getValue(arr, val) {
+
+            var value = [];
+
+            arr.map(function(v, i) {
+                value.push(v[val]);
+            })
+            return value;
+        }
+
+
+        console.log(getValue(obj, 'text'));
+    </script>
+</body>
+
+</html>

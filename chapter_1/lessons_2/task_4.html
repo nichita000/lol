@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function findWord(z) {
+
+            var result = '';
+            var zUpp = z.toUpperCase();
+
+            for (var i = 0; i < z.length; i++) {
+                if (zUpp[i] == z[i]) {
+                    result = result + ' ' + z[i];
+                } else {
+                    result = result + z[i];
+                }
+            }
+            return result;
+        }
+
+        function separate(arr) {
+
+            var exm = [];
+
+            arr.forEach(function(v, i) {
+                v = findWord(v);
+                exm.push(v);
+                return v;
+            })
+            return exm;
+        }
+
+        var arrex = ['daNE', 'getElementById', 'MobileNetwork'];
+
+        console.log(separate(arrex));
+    </script>
+</body>
+
+</html>
