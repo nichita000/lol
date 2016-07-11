@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function findAlo(str) {
+
+            var result = '';
+            var j = 0;
+
+            str = str.split(' ');
+            str.forEach(function(v) {
+                if (v[0] + v[1] + v[2] === 'alo') {
+                    result += ' ' + v;
+                }
+            })
+            return result;
+        }
+
+        console.log(findAlo('dada aloblya nene aloha aga'));
+    </script>
+</body>
+
+</html>
