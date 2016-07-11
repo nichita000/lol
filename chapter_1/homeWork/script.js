@@ -66,3 +66,7 @@ function pluck(arr , propName) {
 		return res;
 	});
 }
+
+
+
+
