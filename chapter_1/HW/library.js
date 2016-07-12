@@ -1,4 +1,4 @@
-'use strict' ;
+'use strict';
 
 (function() {
 
@@ -115,7 +115,6 @@
             }
             return result;
         }
-
-            window._ = a;
+            _=window.a;
     }
 })()

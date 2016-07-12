@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="exm.js"> </script>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+
+        function classs() {
+            this.arr = [];
+            this.regEv = function(newEv, funct) {
+                this.arr.push = [{
+                    ev: newEv,
+                    hundler: funct()
+                }];
+            };
+            this.trigger = function(newEv) {
+                var result =  _.where(this.arr, {
+                    ev: newEv
+                });
+                result[0].funct();
+            };
+            this.delete = function(newEv) {
+                var exm = {
+                    ev: newEv
+                };
+                for (var i = 0; i < this.arr.length; i++) {
+                    if (this.arr[i].newEv === exm.newEv) {
+                        arr.splice(i, 1);
+                    }
+                }
+            }
+        }
+
+        var obj = new classs();
+        obj.regEv('New Event', function() {
+            alert('Hello !!!');
+        });
+
+        console.log(obj.trigger('New Event'));
+    </script>
+</body>
+
+</html>
