@@ -17,16 +17,16 @@
         function classs() {
             this.arr = [];
             this.regEv = function(newEv, funct) {
-                this.arr.push = [{
+                this.arr.push({
                     ev: newEv,
-                    hundler: funct()
-                }];
+                    hundler: funct
+                });
             };
             this.trigger = function(newEv) {
                 var result =  _.where(this.arr, {
                     ev: newEv
                 });
-                result[0].funct();
+                result[0].hundler();
             };
             this.delete = function(newEv) {
                 var exm = {
@@ -46,6 +46,8 @@
         });
 
         console.log(obj.trigger('New Event'));
+        obj.delete('New Event');
+        console.log(obj.arr);
     </script>
 </body>
 

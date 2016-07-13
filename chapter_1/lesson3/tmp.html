@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        // // var strin = `dsfjuhskdf as{{tutka}} losadolol`;
+        // // var list = [
+        // //     {
+        // //         name: 'wedwed',
+        // //         text: 'wedwe'
+        // //     },
+        // //     {
+        // //         name: 'dcsc',
+        // //         text: 'sdcsdc'
+        // //     },
+        // //
+        // //     {
+        // //         name: '',
+        // //         text: ''
+        // //     },
+        // //
+        // //     {
+        // //         name: '',
+        // //         text: ''
+        // //     },
+        // //
+        // //     {
+        // //         name: '',
+        // //         text: ''
+        // //     },
+        // //
+        // //     {
+        // //         name: '',
+        // //         text: ''
+        // //     },
+        // //
+        // //     {
+        // //         name: '',
+        // //         text: ''
+        // //     }
+        // // ];
+        // function findKey(str, prop) {
+        //     for (var j = 0; j < str.length; j++) {
+        //         var result = [];
+        //         var keys = [];
+        //         var keySec = [];
+        //         for (var key in prop[j]) {
+        //             keys.push('{{' + key + '}}');
+        //             keySec.push(key);
+        //         }
+        //         for (var i = 0; i < keys.length; i++) {
+        //             str = str.replace(keys[i], ' ' + prop[j][keySec[i]] + ' ');
+        //         }
+        //         result += result.push(str);
+        //     }
+        //     return result;
+        // }
+        //
+        // function findKeys(stringa, propert) {
+        //     var resultsec = []
+        //     for (var j = 0; j < propert.length; j++) {
+        //         resultsec.push(findKey(stringa, propert))
+        //     }
+        //     return resultsec;
+        // }
+        function findKey(str, prop) {
+                var keys = [];
+                var keySec = [];
+                for (var key in prop) {
+                    keys.push('{{' + key + '}}');
+                    keySec.push(key);
+                }
+                for (var i = 0; i < keys.length; i++) {
+                    str = str.replace(keys[i], ' ' + prop[keySec[i]] + ' ');
+                }
+                return str
+        };
+
+        function findMoreKeys(stra, propa) {
+            var result = '';
+            for (var e = 0; e < propa.length; e++) {
+            result += findKey(stra, propa[e]);
+            }
+            return result;
+        }
+        var star = `
+<div>
+    <span>{{name}}</span>
+    <span>{{text}}</span>
+</div>`;
+
+        var proper = [{
+            name: 'lexa',
+            text: 'tevirp',
+        }, {
+            name: 'moha',
+            text: 'privet'
+        }, {
+            name: 'jopa',
+            text: 'leo'
+        }];
+
+        // console.log(findMoreKeys(star, proper));
+        console.log(findMoreKeys(star, proper));
+    </script>
+</body>
+
+</html>
