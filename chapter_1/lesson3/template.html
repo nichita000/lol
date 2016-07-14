@@ -17,11 +17,11 @@
                 var keys = [];
                 var keySec = [];
                 for (var key in arr) {
-                    keys.push('{{' + key + '}}');
+                    keys.push('{{' + [key] + '}}');
                     keySec.push(key);
                 }
                 for (var i = 0; i < keys.length; i++) {
-                    str = str.replace(keys[i], ' ' + arr[keySec[i]] + ' ');
+                    str = str.replace(keys[i], arr[keySec[i]]);
                 }
                 return str
             };
@@ -53,7 +53,12 @@
             text: 'leo'
         }];
 
-        console.log(obj.render(star, proper));
+        var lol = {
+            name: 'lexa',
+            text : 'jora'
+        }
+
+        console.log(obj.parse(star, lol));
     </script>
 </body>
 
