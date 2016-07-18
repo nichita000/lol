@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// var a = new XMLHttpRequest();
+//         a.onreadystatechange = function () {
+//             var obj;
+//             if(this.readyState === 4) {
+//                 obj = JSON.parse(a.response);
+//                 console.log(a.response);
+//                 console.log(this);
+//             };
+//         }
+//
+//         a.open('GET', 'http://localhost:3333/entry', true);
+
+        // a.send();
+
+
+    </script>
+
+    <script>
+        // get(url, success, error);
+        // post(url, body, success, error);
+        // put(url, body, success, error);
+        // deleteQ(url, success, error);
+
+        function get (url, success, error) {
+            var a = new XMLHttpRequest();
+
+            a.open('GET', url, true);
+
+            a.send();
+
+            a.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        success();
+                    } else {
+                        error();
+                    }
+                }
+            }
+        }
+
+
+    get('http://localhost:3333/saasdasd', function () {
+        alert('s');
+    }, function () {
+        alert('e');
+    });
+    </script>
+</body>
+</html>
