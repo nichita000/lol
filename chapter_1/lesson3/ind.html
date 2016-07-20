@@ -28,26 +28,56 @@
                 });
                 result[0].hundler();
             };
-            this.delete = function(newEv) {
+            this.dele = function(newEv) {
                 var exm = {
                     ev: newEv
                 };
                 for (var i = 0; i < this.arr.length; i++) {
                     if (this.arr[i].newEv === exm.newEv) {
-                        arr.splice(i, 1);
+                        this.arr.splice(i, 1);
                     }
                 }
             }
         }
 
         var obj = new classs();
-        obj.regEv('New Event', function() {
-            alert('Hello !!!');
-        });
+        var count = 0;
+        obj.regEv('full', function() {
+            count++;
 
-        console.log(obj.trigger('New Event'));
-        obj.delete('New Event');
-        console.log(obj.arr);
+            if (count === 3) inner(a, b, c);
+
+            console.log(count)
+        });
+    //
+    // function inner() {
+    //     var str = '';
+    //     for (var i = 0; i < arguments.length; i++) {
+    //         str += ' ' + arguments[i];
+    //     }
+    //     document.querySelector('body').innerHTML =  str;
+    // }
+    //
+    //     // obj.trigger('New Event');
+    //
+    //     var a, b, c;
+    //     setTimeout(function() {
+    //         a = 'aloha';
+    //
+    //         obj.trigger('full');
+    //     }, 123);
+    //
+    //     setTimeout(function() {
+    //         b = 'dadada';
+    // 
+    //         obj.trigger('full');
+    //     }, 1234);
+    //
+    //     setTimeout(function() {
+    //         c = 'nenene';
+    //
+    //         obj.trigger('full');
+    //     }, 312);
     </script>
 </body>
 
