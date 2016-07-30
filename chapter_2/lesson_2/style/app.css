@@ -1,0 +1,70 @@
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+
+body, html {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FF6E40;
+    transition: all 0.3s ease-in-out;
+}
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: none;
+    /*-webkit-box-shadow: 5px 5px 14px -2px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 5px 5px 14px -2px rgba(0, 0, 0, 0.67);
+    box-shadow: 5px 5px 14px -2px rgba(0, 0, 0, 0.67);*/
+    -webkit-box-shadow: 10px 10px 21px -2px rgba(0,0,0,0.67);
+-moz-box-shadow: 10px 10px 21px -2px rgba(0,0,0,0.67);
+box-shadow: 10px 10px 21px -2px rgba(0,0,0,0.67);
+    cursor: pointer;
+}
+
+.window button{
+    width: 100px;
+    height: 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 50vw;
+    min-height: 70vh;
+
+    border: 1px solid #ccc;
+
+    padding: 5px;
+}
+
+main .window {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    overflow: visible;
+    width: 49vw;
+    min-height: 30vh;
+    border: inherit;
+    margin: 20px 0 0 0;
+    padding: 5px;
+}
+
+main .window input {
+    margin: 0 0 20px 0;
+}

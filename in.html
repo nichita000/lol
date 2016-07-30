@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function alphabetPosition(text) {
+            var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            var alphabetUpper = alphabet.toUpperCase();
+            var preResult = '';
+            for (var i = 0; i < text.length; i++) {
+                for (var ii = 0; ii < alphabet.length; ii++) {
+                    if (text[i] === alphabet[ii]) {
+                        ii++;
+                        preResult += ii  + ' ';
+                        ii--;
+                    } else if (text[i] === alphabetUpper[ii]) {
+                        ii++;
+                        preResult += ii + ' ';
+                        ii--;
+                    }
+                }
+            }
+            text = preResult.substring(0, preResult.length - 1 );
+            return text;
+        }
+
+        console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+    </script>
+</body>
+
+</html>
